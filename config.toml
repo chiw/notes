@@ -1,4 +1,5 @@
-baseURL = "/"
+# baseURL = "/"
+baseURL = "https://your-github-username.github.io/"
 languageCode = "en-us"
 title = "Notes"
 
