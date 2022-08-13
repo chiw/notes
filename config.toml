@@ -1,5 +1,10 @@
+# localhost base url
 # baseURL = "/"
+
+# github pages base url
 baseURL = "https://chiw.github.io/notes/"
+
+
 languageCode = "en-us"
 title = "Notes"
 
@@ -7,3 +12,8 @@ theme = "hugo-book"
 
 [params]
 BookTheme = 'dark'
+BookToC = true
+BookRepo = 'https://github.com/chiw/notes'
+BookCommitPath = 'commit'
+BookEditPath = 'edit/main/'
+BookDateFormat = '2006-01-02T15:04:05Z08:00'
