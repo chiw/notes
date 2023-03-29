@@ -100,6 +100,36 @@ Fork/Join's logic is very simple:
 2. process each task in a separate thread (separating those into even smaller tasks if necessary); 
 3. join the results.
 
+## ForkJoinPool set ClassLoader (Java 8 vs Java 9/10/11)
+https://stackoverflow.com/questions/49113207/completablefuture-forkjoinpool-set-class-loader
+
+```
+In Java SE 9, threads that are part of the fork/join common pool will always return the system class loader as their thread context class loader. 
+In previous releases, the thread context class loader may have been inherited from whatever thread causes the creation of the fork/join common pool thread, 
+e.g. by submitting a task.
+```
+
+```
+package foo;
+
+public class MyForkJoinWorkerThreadFactory implements ForkJoinWorkerThreadFactory {
+
+    @Override
+    public final ForkJoinWorkerThread newThread(ForkJoinPool pool) {
+        return new MyForkJoinWorkerThread(pool);
+    }
+
+    private static class MyForkJoinWorkerThread extends ForkJoinWorkerThread {
+
+        private MyForkJoinWorkerThread(final ForkJoinPool pool) {
+            super(pool);
+            // set the correct classloader here
+            setContextClassLoader(Thread.currentThread().getContextClassLoader());
+        }
+    }
+} 
+```
+
 ## RecursiveAction vs RecursiveTask (for ForJoinPool)
 RecursiveAction: do not have return result
 RecursiveTask: have return result
