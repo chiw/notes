@@ -9,7 +9,7 @@ export default defineConfig({
 		starlight({
 			title: 'Notes',
 			social: {
-				github: 'https://github.com/chiw/private-notes',
+				github: 'https://github.com/chiw/notes',
 			},
 			// sidebar: [
 			// 	{
