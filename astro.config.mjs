@@ -8,6 +8,11 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Notes',
+			logo: {
+				light: './src/assets/logo-dark-100-contrailone.svg',
+				dark: './src/assets/logo-light-100-contrailone.svg',
+				replacesTitle: true,
+			},
 			social: {
 				github: 'https://github.com/chiw/notes',
 			},
