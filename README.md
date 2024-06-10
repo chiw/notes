@@ -6,6 +6,9 @@ astro
 - https://astro.build/
 - build with pnpm
 
+How to store images
+- https://docs.astro.build/en/guides/images/
+
 Theme used:
 - https://starlight.astro.build/getting-started/
 - https://starlight.astro.build/guides/css-and-tailwind/
