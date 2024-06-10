@@ -6,12 +6,12 @@ astro
 - https://astro.build/
 - build with pnpm
 
-How to store images
-- https://docs.astro.build/en/guides/images/
-
 Theme used:
 - https://starlight.astro.build/getting-started/
 - https://starlight.astro.build/guides/css-and-tailwind/
+
+How to store images in starlight theme
+- https://starlight.astro.build/guides/authoring-content/#images
 
 Setup for Github pages:
 - https://docs.astro.build/en/guides/deploy/github/#configure-astro-for-github-pages
